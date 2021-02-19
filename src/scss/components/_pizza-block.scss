@@ -1,0 +1,68 @@
+@import "../variables";
+
+.pizza-block {
+  width: 250px;
+  text-align: center;
+  margin: 0 1.25em 3.75em;
+
+  &__image {
+    width: 250px;
+  }
+
+  &__title {
+    font-size: 1.25rem;
+    font-weight: 900;
+    letter-spacing: 1%;
+    margin-bottom: 1.25em;
+  }
+
+  &__selector {
+    display: flex;
+    background-color: #f3f3f3;
+    border-radius: 0.625em;
+    flex-direction: column;
+    padding: 0.375em;
+
+    ul {
+      display: flex;
+      flex: 1;
+
+      &:first-of-type {
+        margin-bottom: 0.375em;
+      }
+
+      li {
+        padding: 0.5em;
+        flex: 1;
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 0.875rem;
+
+        &.active {
+          background: #ffffff;
+          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04);
+          border-radius: 0.3125em;
+          cursor: auto;
+        }
+        &.disabled {
+          opacity: 0.4;
+          pointer-events: none;
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.25em;
+  }
+
+  &__price {
+    font-weight: bold;
+    font-size: 1.375rem;
+    line-height: 1.2;
+    letter-spacing: 0.015em;
+  }
+}
