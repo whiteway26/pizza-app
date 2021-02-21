@@ -21,4 +21,4 @@ function pizzas(state = initialState, action) {
   }
 }
 
-export default pizzas;
+export { pizzas };

@@ -21,8 +21,9 @@ const SortPopup = React.memo(function SortPopup({
     setShowPopup(false);
   };
 
-  const handleOutsideSort = (e) => {
-    if (!e.path.includes(sortRef.current)) {
+  const handleOutsideSort = (event) => {
+    const path = event.path || (event.composedPath && event.composedPath());
+    if (!path.includes(sortRef.current)) {
       setShowPopup(false);
     }
   };
