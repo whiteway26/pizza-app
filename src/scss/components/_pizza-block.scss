@@ -3,10 +3,10 @@
 .pizza-block {
   width: 250px;
   text-align: center;
-  margin: 0 1.25em 3.75em;
+  margin: 0 2em 3.75em;
 
   &__image {
-    width: 250px;
+    width: 230px;
   }
 
   &__title {
@@ -14,6 +14,14 @@
     font-weight: 900;
     letter-spacing: 1%;
     margin-bottom: 1.25em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    &:hover {
+      text-overflow: none;
+      white-space: normal;
+    }
   }
 
   &__selector {

@@ -5,8 +5,6 @@ import { Provider } from "react-redux";
 import store from "./redux/store";
 import App from "./App";
 
-window.store = store;
-
 ReactDOM.render(
   <React.StrictMode>
     <Router>

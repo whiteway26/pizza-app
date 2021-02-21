@@ -4,19 +4,9 @@ import { Route } from "react-router-dom";
 import "./scss/app.scss";
 
 import { Header } from "./components";
-import { Cart, Home } from "./pages";
-import setPizzas from "./redux/actions/pizzas";
-import { useDispatch } from "react-redux";
+import { Home, Cart } from "./pages";
 
 function App() {
-  const dispatch = useDispatch();
-
-  React.useEffect(() => {
-    fetch("http://localhost:3001/pizzas?_order=desc&_sort=price")
-      .then((res) => res.json())
-      .then((data) => dispatch(setPizzas(data)));
-  }, []);
-
   return (
     <div className="wrapper">
       <Header />
