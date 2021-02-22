@@ -38,4 +38,4 @@ Categories.propTypes = {
 
 Categories.defaultProps = { activeCategory: null, items: [] };
 
-export default Categories;
+export { Categories };

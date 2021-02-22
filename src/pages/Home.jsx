@@ -7,12 +7,7 @@ import {
   fetchPizzas,
   addPizzaToCart,
 } from "../redux/actions";
-import {
-  Categories,
-  SortPopup,
-  PizzaBlock,
-  PizzaLoadingBlock,
-} from "../components";
+import { Categories, SortPopup, PizzaBlock, LoadingBlock } from "../components";
 
 const categoryNames = [
   "Мясные",
@@ -56,7 +51,6 @@ function Home() {
 
   const addToCart = (pizzaObj) => {
     dispatch(addPizzaToCart(pizzaObj));
-    // console.log(pizzaObj);
   };
 
   return (
@@ -81,12 +75,14 @@ function Home() {
                 key={item.id}
                 {...item}
                 onClickAddPizza={addToCart}
-                addedCount={cartItems[item.id] && cartItems[item.id].length}
+                addedCount={
+                  cartItems[item.id] && cartItems[item.id].items.length
+                }
               />
             ))
           : Array(10)
               .fill(0)
-              .map((_, index) => <PizzaLoadingBlock key={index} />)}
+              .map((_, index) => <LoadingBlock key={index} />)}
       </div>
     </section>
   );

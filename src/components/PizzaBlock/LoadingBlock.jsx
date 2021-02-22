@@ -21,4 +21,4 @@ function LoadingBlock() {
   );
 }
 
-export default LoadingBlock;
+export { LoadingBlock };

@@ -80,4 +80,4 @@ SortPopup.propTypes = {
 
 SortPopup.defaultProps = {};
 
-export default SortPopup;
+export { SortPopup };

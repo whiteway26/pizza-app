@@ -114,4 +114,4 @@ PizzaBlock.defaultProps = {
   types: [],
 };
 
-export default PizzaBlock;
+export { PizzaBlock };

@@ -3,10 +3,7 @@ import { Link } from "react-router-dom";
 import pizzaLogo from "../assets/img/pizza-logo.svg";
 
 function Header() {
-  const { totalCount, totalPrice } = useSelector(({ cart }) => ({
-    totalCount: cart.totalCount,
-    totalPrice: cart.totalPrice,
-  }));
+  const { totalCount, totalPrice } = useSelector(({ cart }) => cart);
 
   return (
     <header className="header">
@@ -61,4 +58,4 @@ function Header() {
   );
 }
 
-export default Header;
+export { Header };
